@@ -16,8 +16,11 @@ namespace MvcApp1
             );
             config.Routes.MapHttpRoute(
                 name: "ActionApi",
-                routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}/{name}"
+            );
+            config.Routes.MapHttpRoute(
+                name: "ActionApi2",
+                routeTemplate: "api/{controller}/{action}/{id}"
             );
 
             // Uncomment the following line of code to enable query support for actions with an IQueryable or IQueryable<T> return type.
